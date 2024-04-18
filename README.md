@@ -42,3 +42,37 @@ chicago.csv
 washington.csv
 new_york_city.csv
 CSV files are derived from Motivate co. via Udacity. Thanks!
+
+### Usage
+File can be run in console as
+`python bikeshare.py`
+
+User needs to input the following text (in **bold**)
+`
+Display log info? y/n : *y*
+INFO: libraries loaded... successfully
+Welcome to Motivate Co Archives. What would you like to view today?
+Current data available is for Chicago, New York City and Washington. Which city data to load?
+*chicago*
+INFO: Chicago database loaded successfully
+Do you want to filter data by a specific month? If so please enter month to filter by. Else type 'all' : january
+INFO: Selected month is :  *january*
+Do you want to filter data by a specific day of the week? If so please enter day to filter by. Else type 'all' : wednesday
+INFO: Selected day of week is :  *wednesday*
+INFO: User data inputs loaded successfully.
+...
+_Stats_Displayed_Here_
+...
+Total rows of data available are 3389 rows
+Do you wish to view raw data? y/n : y
+Displaying records 1-5 out of 3389
+     Unnamed: 0          Start Time            End Time  Trip Duration                 Start Station                     End Station   User Type Gender  Birth Year  month  dow  hour
+...
+Continue? y/n : *n*
+----------------------------------------
+Would you like to view other stats? Enter y/n : *n*
+`
+Display of log info can be enabled or disabled using (y,n) respectively.
+Cities input must be (New York City,NYC,Washington,Chicago)
+Months must be standard gregorian months (January, February, etc.). Numbers 1 through 12 can also be given as input.
+Day of week must be (Monday, Tuesday, etc.). Numbers 0-6 for Monday to Sunday respectively can also be given as input. 
