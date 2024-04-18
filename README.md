@@ -1,17 +1,44 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Exploring Bikeshare Data of Motivate (Udacity Project)
 
 ### Date created
-Include the date you created this project and README file.
+Created on 18th of April, 2024
 
 ### Project Title
-Replace the Project Title
+Interactive Bike Share Stats Tracker 
 
-### Description
-Describe what your project is about and what it does
+### Description	
+The aim of this project is to analyze bike data of the company Motivate and print relevant stats for the user to see.
+The user should be able to filer the data as per requirements:
+
+- City (Required)
+- Filter by Month (optional, default 'all')
+- Filter by day of week (optional, default 'all')
+
+The filtered data needs to be analyzed to see the below observations:
+- Popular times of travel (i.e., occurs most often in the start time)
+	- most common month
+	- most common day of week
+	- most common hour of day
+
+- Popular stations and trip
+	- most common start station
+	- most common end station
+	- most common trip from start to end (i.e., most frequent combination of start station and end station)
+
+- Trip duration
+	- total travel time
+	- average travel time
+
+- User info
+	- counts of each user type
+	- counts of each gender (only available for NYC and Chicago)
+	- earliest, most recent, most common year of birth (only available for NYC and Chicago)
+	
+Project template used from Udacity Course downloads
 
 ### Files used
-Include the files used
-
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+bikeshare.py
+chicago.csv
+washington.csv
+new_york_city.csv
+CSV files are derived from Motivate co. via Udacity. Thanks!
