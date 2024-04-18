@@ -324,11 +324,16 @@ def sec2week(init_str,tot_sec):
 	tot_hour,tot_min=divmod(tot_min,60)
 	tot_day,tot_hour=divmod(tot_hour,60)
 	tot_week,tot_day=divmod(tot_day,60)
-	weekstr= str(int(tot_week)) + ' weeks,' if tot_week >0 else ''
-	daystr=str(int(tot_day)) + ' days,' if tot_day >0 or tot_week >0 else ''
-	hrstr=str(int(tot_hour)) + ' hr,' if tot_hour >0 or tot_day >0 or tot_week >0 else ''
-	minstr=str(int(tot_min)) + ' min,' if tot_min >0 or tot_hour >0 or tot_day >0 or tot_week >0 else ''
-	secstr=str(int(tot_sec)) + ' s' if tot_sec >0 or tot_min >0 or tot_hour >0 or tot_day >0 or tot_week >0 else ''
+	disp_week=tot_week >0
+	disp_day=disp_week or tot_day  > 0
+	disp_hour=disp_day or tot_hour > 0
+	disp_min=disp_hour or tot_min  > 0
+	disp_sec=disp_min  or tot_sec  > 0
+	weekstr= str(int(tot_week)) + ' weeks,' if disp_week else ''
+	daystr=str(int(tot_day)) + ' days,' if disp_day else ''
+	hrstr=str(int(tot_hour)) + ' hr,' if disp_hour else ''
+	minstr=str(int(tot_min)) + ' min,' if disp_min else ''
+	secstr=str(int(tot_sec)) + ' s' if disp_sec else ''
 	print(f"{init_str}{weekstr} {daystr} {hrstr} {minstr} {secstr} ")
 	
 #############################################################
