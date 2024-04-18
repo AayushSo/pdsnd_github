@@ -33,7 +33,9 @@ Project template used from Udacity Course downloads
 
 logger=False # Use this to enable/disable log messages
 inp=input("Display log info? y/n : ")
-if inp.lower()[0]=='y' : logger=True
+if len(inp)==0 : logger=False #Default disable in case of no text
+elif inp.lower()[0]=='y' : logger=True
+
 
 def logparse(*args):
 	""" 
@@ -106,6 +108,7 @@ def get_user_input():
 	month=""
 	while not month in months :
 		month=input("Do you want to filter data by a specific month? If so please enter month to filter by. Else type 'all' : ")
+		if len(month)==0 : month='all' #Default null option
 		month = month.strip().lower()
 		if month.isdigit():
 			month=int(month)
@@ -130,6 +133,7 @@ def get_user_input():
 	dow=""
 	while not dow in days :
 		dow=input("Do you want to filter data by a specific day of the week? If so please enter day to filter by. Else type 'all' : ")
+		if len(dow)==0 : dow='all' #Default null option
 		dow = dow.strip().lower()
 		if dow.isdigit() :
 			dow=int(dow)
@@ -155,7 +159,7 @@ def get_user_input():
 	return df,city,month,dow,month_filter,dow_filter
 
 def time_stats(df,month,dow,month_filter=False,dow_filter=False):
-	'''Displays statistics on the most frequent times of travel.'''
+	"""Displays statistics on the most frequent times of travel."""
 	
 	print('\nCalculating The Most Frequent Times of Travel...\n')
 	start_time = time.time()
